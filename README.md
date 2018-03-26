@@ -4,14 +4,14 @@ Common programming problems and their solutions
 
 # Array
 + [Find pair with given sum in the array](doc/find-pair-with-given-sum-array.md)
-+ Check if subarray with 0 sum is exists or not
-+ Find sub-array with 0 sum
-+ Rearrange the array with alternate high and low elements
-+ Sort binary array in linear time
-+ Sort an array containing 0’s, 1’s and 2’s (Dutch national flag problem)
-+ Shuffle a given array of elements (Fisher–Yates shuffle)
-+ Find equilibrium index of an array
-+ Find majority element in an array (Boyer–Moore majority vote algorithm)
++ [Check if subarray with 0 sum is exists or not](doc/check-subarray-with-0-sum-exists-not.md)
++ [Find sub-array with 0 sum](doc/find-sub-array-with-0-sum.md)
++ [Rearrange the array with alternate high and low elements](doc/rearrange-the-array-with-alternate-high-and-low-elements.md)
++ [Sort binary array in linear time](doc/sort-binary-array-linear-time.md)
++ [Sort an array containing 0’s, 1’s and 2’s (Dutch national flag problem)](doc/sort-array-containing-0s-1s-2s-dutch-national-flag-problem.md)
++ [Shuffle a given array of elements (Fisher–Yates shuffle)](doc/shuffle-given-array-elements-fisher-yates-shuffle.md)
++ [Find equilibrium index of an array](doc/find-equilibrium-index-array.md)
++ [Find majority element in an array (Boyer–Moore majority vote algorithm)](doc/find-majority-element-in-an-array-boyer-moore-majority-vote-algorithm.md)
 + Move all zeros present in the array to the end
 + Inplace merge two sorted arrays
 + Merge two arrays by satisfying given constraints
@@ -505,7 +505,7 @@ Common programming problems and their solutions
 + Find largest number possible from set of given numbers
 + Move all zeros present in the array to the end
 + Sort linked list containing 0’s, 1’s and 2’s
-+ Sort binary array in linear time
++ [Sort binary array in linear time](doc/sort-binary-array-linear-time.md)
 + Merge Sort for Singly Linked List
 + Group anagrams together from given list of words
 + Activity Selection Problem
@@ -516,7 +516,7 @@ Common programming problems and their solutions
 + Find all palindromic permutations of a string
 + Find all lexicographically next permutations of a string sorted in ascending order
 + Merge two sorted linked lists from their end
-+ Sort an array containing 0’s, 1’s and 2’s (Dutch national flag problem)
++ [Sort an array containing 0’s, 1’s and 2’s (Dutch national flag problem)](doc/sort-array-containing-0s-1s-2s-dutch-national-flag-problem.md)
 + [Find pair with given sum in the array](doc/find-pair-with-given-sum-array.md)
 + Inplace merge two sorted arrays
 + Merge two arrays by satisfying given constraints
