@@ -2,32 +2,41 @@
 Given an array of integers, rearrange the array such that every second element of the array is greater than its left and right elements. Assume no duplicate elements are present in the array.
 For example,
 
-**Input:** `{1, 2, 3, 4, 5, 6, 7}`
-**Output:** `{1, 3, 2, 5, 4, 7, 6}`
+**Input:**  
+`{1, 2, 3, 4, 5, 6, 7}`
 
-**Input:** `{9, 6, 8, 3, 7}`
+**Output:** 
+`{1, 3, 2, 5, 4, 7, 6}`
+
+---
+**Input:**  `{9, 6, 8, 3, 7}`
+
 **Output:** `{6, 9, 3, 8, 7}`
 
-**Input:** `{6, 9, 2, 5, 1, 4}`
+---
+**Input:**  `{6, 9, 2, 5, 1, 4}`
+
 **Output:** `{6, 9, 2, 5, 1, 4}`
 
 A simple solution would be to sort the array in ascending order first. Then we take another auxiliary array and fill it with elements starting from the two end-points of the sorted array in alternate order. Below is the complete algorithm –
 **rearrangeArray (int arr[], int n)**
 1. Sort the array in ascending order.
-2. Take two index variables i and j to that points to two end-points of the array
-(i.e. `i = 0 `and `j = n – 1`)
-3. Create an auxiliary array `A[]` & initialize an index k with 0
-4. `while (i < j)
-A[k++] = arr[i++]
-A[k++] = arr[j–]`
+
+2. Take two index variables `i` and `j` to that points to two end-points of the array (i.e. `i = 0` and `j = n – 1`)
+
+3. Create an auxiliary array `A[]` and initialize an index `k` with `0`
+4. 
+    `while (i < j)`  
+    `A[k++] = arr[i++]`  
+    `A[k++] = arr[j–]`
+
 5. print `A[]`
 
-The Time complexity of this solution would be O(nlogn) .
+The Time complexity of this solution would be O(nlogn).
 An efficient solution doesn’t involve sorting the array or use of auxiliary space. We start from the second element of the array and increment index by 2 for each iteration of loop. If previous element is greater than the current element, we swap the elements. Similarly if next element is greater than the current element, we swap both elements. At the end of loop, we will get the desired array that satisfies given constraints.
 
 ##### C
 ```C
-
 #include <stdio.h>
 // Utility function to swap two elements arr[i] and arr[j] in the array
 void swap(int arr[], int i, int j)
@@ -72,7 +81,6 @@ int main(void)
 
 ##### Java
 ```Java
-
 import java.util.Arrays;
 class Rearrange
 {

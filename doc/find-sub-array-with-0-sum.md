@@ -1,25 +1,28 @@
 # Print all sub-arrays with 0 sum
 Given an array of integers, print all sub-arrays with 0 sum.
 For example,
-**Input:** { 4, 2, -3, -1, 0, 4 }
-Sub-arrays with 0 sum are
-+ { -3, -1, 0, 4 }
-+ { 0 }
 
-**Input:** { 3, 4, -7, 3, 1, 3, 1, -4, -2, -2 }
+**Input:**  `{ 4, 2, -3, -1, 0, 4 }`
+
 Sub-arrays with 0 sum are
-+ { 3, 4, -7 }
-+ { 4, -7, 3 }
-+ { -7, 3, 1, 3 }
-+ { 3, 1, -4 }
-+ { 3, 1, 3, 1, -4, -2, -2 }
-+ { 3, 4, -7, 3, 1, 3, 1, -4, -2, -2 }
++ `{ -3, -1, 0, 4 }`
++ `{ 0 }`
+
+**Input:**  `{ 3, 4, -7, 3, 1, 3, 1, -4, -2, -2 }`
+
+Sub-arrays with 0 sum are
++ `{ 3, 4, -7 }`
++ `{ 4, -7, 3 }`
++ `{ -7, 3, 1, 3 }`
++ `{ 3, 1, -4 }`
++ `{ 3, 1, 3, 1, -4, -2, -2 }`
++ `{ 3, 4, -7, 3, 1, 3, 1, -4, -2, -2 }`
 
 ### Approach 1: Naive solution
-Naive solution would be to consider all sub-arrays and find its sum. If sub-array sum is equal to 0, we print it. The time complexity of naive solution is O(n^3^) as there are n^2^ sub-arrays and it takes O(n) time to find sum of its elements. The method can be optimized to run in O(n^2^) time by calculating sub-array sum in constant time.
+Naive solution would be to consider all sub-arrays and find its sum. If sub-array sum is equal to 0, we print it. The time complexity of naive solution is O(n<sup>3</sup>) as there are n<sup>2</sup> sub-arrays and it takes O(n) time to find sum of its elements. The method can be optimized to run in O(n<sup>2</sup>) time by calculating sub-array sum in constant time.
+
 ##### C++
 ```C++
-
 #include <iostream>
 #include <unordered_map>
 using namespace std;
@@ -56,7 +59,6 @@ int main()
 
 ##### Java
 ```Java
-
 class PrintallSubarrays
 {
     // Function to print all sub-arrays with 0 sum present
@@ -88,17 +90,18 @@ class PrintallSubarrays
 }
 ```
 **Output:**
-Subarray [0..2]
-Subarray [0..9]
-Subarray [1..3]
-Subarray [2..5]
-Subarray [3..9]
-Subarray [5..7]
++ Subarray [0..2]
++ Subarray [0..9]
++ Subarray [1..3]
++ Subarray [2..5]
++ Subarray [3..9]
++ Subarray [5..7]
+
 ### Approach 2: Using multimap to print all subarrays
 We can use MultiMap to print all sub-arrays with 0 sum present in the given array. The idea is to create an empty multimap to store ending index of all sub-arrays having given sum. We traverse the given array, and maintain sum of elements seen so far. If sum is seen before, there exists at-least one sub-array with 0 sum which ends at current index and we print all such sub-arrays.
+
 ##### C++
 ```C++
-
 #include <iostream>
 #include <unordered_map>
 using namespace std;
@@ -146,7 +149,6 @@ int main()
 
 ##### Java
 ```Java
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -202,9 +204,9 @@ class PrintallSubarrays
 }
 ```
 **Output:**
-Subarray [0..2]
-Subarray [1..3]
-Subarray [2..5]
-Subarray [5..7]
-Subarray [3..9]
-Subarray [0..9]
++ Subarray [0..2]
++ Subarray [1..3]
++ Subarray [2..5]
++ Subarray [5..7]
++ Subarray [3..9]
++ Subarray [0..9]
