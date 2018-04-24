@@ -1,19 +1,21 @@
 # Find Pair with given Sum in the Array
+
 Given an unsorted array of integers, find a pair with given sum in it.
 For example,
 
 **Input:**
-`arr = [8, 7, 2, 5, 3, 1]`
+arr = [8, 7, 2, 5, 3, 1]
 sum = 10
+
 **Output:**
 Pair found at index 0 and 2 (8 + 2)
 or
 Pair found at index 1 and 4 (7 + 3)
+
 ### 1. Naive Approach –
 Naive solution would be to consider every pair in given array and return if desired sum is found.
 ##### C
 ```C
-
 #include <stdio.h>
 // Naive method to find a pair in an array with given sum
 void findPair(int arr[], int n, int sum)
@@ -35,6 +37,7 @@ void findPair(int arr[], int n, int sum)
     // No pair with given sum exists in the array
     printf("Pair not found");
 }
+
 // Find pair with given sum in the array
 int main()
 {
@@ -48,7 +51,6 @@ int main()
 
 ##### Java
 ```Java
-
 class FindPair
 {
     // Naive method to find a pair in an array with given sum
@@ -72,6 +74,7 @@ class FindPair
         // No pair with given sum exists in the array
         System.out.println("Pair not found");
     }
+
     // main function
     public static void main (String[] args)
     {
@@ -84,12 +87,12 @@ class FindPair
 **Output:**
 Pair found at index 0 and 2
 
-The time complexity of above solution is O(n^2^) and auxiliary space used by the program is O(1).
-### 2. O(nlog(n)) solution using Sorting
-The idea is to sort the given array in ascending order and maintain search space by maintaining two indices (low and high) that initially points to two end-points of the array. Then we loop till low is less than high index and reduce search space `arr[low..high]` at each iteration of the loop. We compare sum of elements present at index low and high with desired sum and increment low if sum is less than the desired sum else we decrement high is sum is more than the desired sum. Finally, we return if pair found in the array.
+The time complexity of above solution is O(n<sup>2</sup>) and auxiliary space used by the program is O(1).
+
+### 2. O(nlog(n)) solution using sorting
+The idea is to sort the given array in ascending order and maintain search space by maintaining two indices (low and high) that initially points to two end-points of the array. Then we loop till low is less than high index and reduce search space arr[low..high] at each iteration of the loop. We compare sum of elements present at index low and high with desired sum and increment low if sum is less than the desired sum else we decrement high is sum is more than the desired sum. Finally, we return if pair found in the array.
 ##### C++
 ```C++
-
 #include <iostream>
 #include <algorithm>
 // Function to find a pair in an array with given sum using Sorting
@@ -130,7 +133,6 @@ int main()
 
 ##### Java
 ```Java
-
 import java.util.Arrays;
 class FindPair
 {
@@ -176,8 +178,9 @@ class FindPair
 Pair found
 
 The time complexity of above solution is O(nlogn) and auxiliary space used by the program is O(1).
+
 ### 3. O(n) solution using Hashing
-We can use map to easily solve this problem in linear time. The idea is to insert each element of the array `arr[i]` in a map. We also checks if difference `(arr[i], sum-arr[i])` already exists in the map or not. If the difference is seen before, we print the pair and return.
+We can use map to easily solve this problem in linear time. The idea is to insert each element of the array arr[i] in a map. We also checks if difference (arr[i], sum-arr[i]) already exists in the map or not. If the difference is seen before, we print the pair and return.
 ##### C++
 ```C++
 
@@ -218,7 +221,6 @@ int main()
 
 ##### Java
 ```Java
-
 import java.util.HashMap;
 import java.util.Map;
 class FindPair
